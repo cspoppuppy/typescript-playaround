@@ -1,39 +1,44 @@
 # TypeScript
 
-#### Install
+### Install
 
 ---
 
 `npm i -g typescript`
 
+### Setup
+
+---
+
 #### Create file
 
 ```TypeScript
-// greeter.ts
-function greeter(person) {
-  return "hello, " + person;
+// add.ts
+const add = (num1: number, num2: number) => {
+  return num1 + num2;
 }
 
-let user = "Jane User";
-
-document.body.textContent = greeter(user);
+console.log(add(1, 2))
+console.log(add("1", "2")) // this will be highlight as error
 ```
 
 #### Compile to JavaScript file
 
 ```console
 # general
-tsc greeter.ts
+tsc add.ts
 
 # if includes es5 contents
-tsc -t es5 greeter.ts
+tsc -t es5 add.ts
 # or
-tsc greeter -t es5
+tsc add.ts -t es5
 ```
 
-#### Overview
+### Overview
 
-Basic Types:
+---
+
+##### Basic Types:
 
 -   number
 -   string
@@ -48,14 +53,14 @@ Basic Types:
 -   undefined
 -   never
 
-Advance Types:
+##### Advance Types:
 
 -   union
 -   literal
 
-Type Assertion
+##### Type Assertion
 
-OOP
+##### OOP
 
 -   object
 -   interface
